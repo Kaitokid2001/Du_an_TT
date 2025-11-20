@@ -195,7 +195,7 @@ a{
 
 .secvice__desc{
     width: 468px;
-    margin: 0 auto;
+    margin: 18px auto 0px;
 }
 
 .service__row{
@@ -261,4 +261,56 @@ a{
 
 .service__btn{
     margin-top: 55px;
+}
+
+/* ============= work ======================= */
+.work{
+    background: #F6FBFF;;
+}
+
+.work__heading{
+    padding-top: 86px;
+}
+
+.work__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 338px;
+    height: 370px;
+    padding: 16px;
+    background: #FFF;
+    padding-left: 42px;
+    margin-top: 86px;
+    margin-bottom: 100px;
+}
+
+.work__item--heading{
+    margin-top: 18px;
+    color: #10375C;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.38;
+}
+
+.work__item--desc{
+    margin-top: 28px;
+    color: #575F66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75; /* 175% */
+}
+
+.work__item--link{
+    color: #2E80CE;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+    margin-top: 18px;
 }
