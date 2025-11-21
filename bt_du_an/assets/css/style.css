@@ -561,6 +561,7 @@ a{
     border: 1px solid #E8EBEE;
     background: #FFF;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .dental__item:hover{
@@ -619,6 +620,7 @@ a{
 }
 
 .appointment__inner {
+    width: 100%;
     padding: 100px 178px;
     background: #f6fbff;
     text-align: center;

@@ -1,0 +1,329 @@
+/* PC */
+@media (min-width: 992px){
+    .mobile__header{
+        display: none;
+    }
+}
+
+/* Tablet  &  Mobile*/
+@media (max-width: 991.98px){
+    .header__top{
+        position: relative;
+    }
+
+    .header__logo{
+        position: absolute;
+        left: 50%;
+        translate: -50% -50%;
+    }
+    
+    .navbar{
+        display: none;
+    }
+
+    .menu__header--icon{
+        position: absolute;
+        top: 39px;
+        left: 25px;
+        color: white;
+        width: 24px;
+    }
+
+    /* overlay */
+    .menu-overlay{
+        position: fixed;
+        background: rgba(0, 0, 0, 0.3);
+        inset: 0;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+
+    /* kiem tra menu checkbox co nhan duoc khong */
+    .menu-checkbox:checked ~ .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-drawer{
+        position: fixed;
+        background-color: #10375C;
+        inset: 0 50% 0 0;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: 0.5s;
+        padding: 60px;
+    }
+
+    .menu-checkbox:checked ~ .menu-drawer{
+        transform: translateX(0);
+    }
+
+    /* close menu */
+    .close__menu{
+        width: 30px;
+        color: #fff;
+    }
+
+    .menu-drawer__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #navbar__list--mobile{
+        margin-top: 25px;
+    }
+
+    .navbar__link{
+        display: block;
+        font-size: 2rem;
+        text-align: left;
+        transition: 0.5s;
+    }
+
+    .navbar__link:hover{
+        background-color: #00ffff;
+        border-radius: 4px;
+    }
+
+    /* hero */
+    .hero{
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    
+    /* thay doi vi tri */
+    .hero__content{
+        order: 2;
+    }
+
+    .hero__media{
+        order: 1;
+    }
+
+    .hero__content{
+        width: 80%;
+        text-align: center;
+        margin: 22px auto;
+    }
+
+    .hero-row{
+        justify-content: center;
+    }
+
+    /* service */
+    .service__row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .service__img{
+        width: 100%;
+    }
+
+    .service__item{
+        width: 90%;
+        text-align: start;
+    }
+
+    .service__list{
+        text-align: center;
+    }
+
+    /* work */
+    .work__list{
+        grid-template-columns: 1fr;
+    }
+
+    /* about Us */
+    .aboutUs__row{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .aboutUs__media{
+        width: 100%;
+        
+    }
+
+    .aboutUs__big{
+        width: 100%;
+        border-radius: 15px;
+        margin: 25px auto;
+    }
+
+    .aboutUs__small{
+        display: none;
+    }
+
+    .aboutUs__content{
+        width: 90%;
+        text-align: center;
+    }
+
+    /* team */
+    .team__list{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+    
+    .team__item--img{
+        margin: 0 auto;
+    }
+
+    /* cta */
+    .cta__img{
+        display: none;
+    }
+
+    .cta__content{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* dental */
+    .dental__header{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .dental__content{
+        order: 2;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dental__list{
+        order: 1;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dental__list{
+        width: 90%;
+    }
+
+    .dental__heading{
+        max-width: 90%;
+    }
+}
+
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .footer-hidden-table{
+        display: none;
+    }
+
+    .footer__top{
+        grid-template-columns: 0.5fr 0.5fr 1fr;
+    }
+
+    .show-on-mobile{
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px){
+    .header__action{
+        display: none;
+    }
+
+    .menu__header--icon{
+        top: 16px
+    }
+
+    .menu-drawer{
+        inset: 0 20% 0 0;
+        padding: 40px;
+    }
+
+    .navbar__item{
+        list-style-type: none;
+    }
+
+    .separate{
+        border-top: 1.5px solid #8c8b8b;
+        margin-top: 10px;
+    }
+
+    .hero__img--large{
+        width: 100%;
+    }
+
+    .hero__img--small{
+        display: none;
+    }
+
+    .hero__heading{
+        font-size: 3rem;
+    }
+    .hero_row{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .service{
+        padding: 70px 0;
+    }
+
+    .secvice__desc{
+        width: 93%;
+    }
+
+    .service__img{
+        height: auto;
+    }
+
+    .work__desc{
+        width: 93%;
+    }
+
+    .work__item{
+        margin-top: 20px;
+        padding: 40px auto;
+    }
+
+    .section__heading{
+        font-size: 3rem;
+    }
+
+    .team__list{
+        grid-template-columns: 1fr;
+    }
+
+    .cta__header{
+        margin: 40px 0;
+        padding: 0 8px;
+    }
+
+    .dental__list{
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .dental__content{
+        text-align: center;
+    }
+
+    .appointment__inner{
+        padding: 30px 5px;
+    }
+
+    .footer__top{
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .footer__bottom{
+        margin-top: 30px;
+    }
+}

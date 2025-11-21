@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png">
@@ -34,9 +35,9 @@
     <header class="header">
         <div class="container">
             <div class="header__top">
-                <a href="./"><img src="./assets/img/Logo.png" alt="Shine smile" class="logo"></a>
+                <a href="./"><img src="./assets/img/Logo.png" alt="Shine smile" class="logo header__logo"></a>
                 <nav class="navbar">
-                    <ul class="navbar__list">
+                    <ul class="navbar__list" id="navbar__list--pc">
                         <li class="navbar__item">
                             <a href="#!" class="navbar__link navbar__link--active">Home</a>
                         </li>
@@ -74,7 +75,46 @@
             </section>
         </div>
     </header>
+    <!-- Tablet/mobile header -->
+    <div class="mobile__header">
+        <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+        <label for="menu-checkbox">
+            <svg class="menu__header--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="currentColor" d="M104 112C90.7 112 80 122.7 80 136L80 184C80 197.3 90.7 208 104 208L152 208C165.3 208 176 197.3 176 184L176 136C176 122.7 165.3 112 152 112L104 112zM256 128C238.3 128 224 142.3 224 160C224 177.7 238.3 192 256 192L544 192C561.7 192 576 177.7 576 160C576 142.3 561.7 128 544 128L256 128zM256 288C238.3 288 224 302.3 224 320C224 337.7 238.3 352 256 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L256 288zM256 448C238.3 448 224 462.3 224 480C224 497.7 238.3 512 256 512L544 512C561.7 512 576 497.7 576 480C576 462.3 561.7 448 544 448L256 448zM80 296L80 344C80 357.3 90.7 368 104 368L152 368C165.3 368 176 357.3 176 344L176 296C176 282.7 165.3 272 152 272L104 272C90.7 272 80 282.7 80 296zM104 432C90.7 432 80 442.7 80 456L80 504C80 517.3 90.7 528 104 528L152 528C165.3 528 176 517.3 176 504L176 456C176 442.7 165.3 432 152 432L104 432z"/></svg>
+        </label>  
+        <!-- overlay -->
+        <label for="menu-checkbox" class="menu-overlay"></label>
+        <!-- menu content -->
+        <div class="menu-drawer">
+            <!-- nav mobile -->
+            <div class="menu-drawer__top">
+                <a href="./"><img src="./assets/img/Logo.png" alt="Shine smile" class="logo"></a>
+                <label for="menu-checkbox">
+                    <svg class="close__menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="currentColor" d="M320 112C434.9 112 528 205.1 528 320C528 434.9 434.9 528 320 528C205.1 528 112 434.9 112 320C112 205.1 205.1 112 320 112zM320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM231 231C221.6 240.4 221.6 255.6 231 264.9L286 319.9L231 374.9C221.6 384.3 221.6 399.5 231 408.8C240.4 418.1 255.6 418.2 264.9 408.8L319.9 353.8L374.9 408.8C384.3 418.2 399.5 418.2 408.8 408.8C418.1 399.4 418.2 384.2 408.8 374.9L353.8 319.9L408.8 264.9C418.2 255.5 418.2 240.3 408.8 231C399.4 221.7 384.2 221.6 374.9 231L319.9 286L264.9 231C255.5 221.6 240.3 221.6 231 231z"/></svg>
+                </label>
+            </div>
+            <ul id="navbar__list--mobile"></ul>
+            <script>
+                // su ly js lay code
+                const navPC = document.querySelector("#navbar__list--pc");
+                const navMobile = document.querySelector("#navbar__list--mobile");
+                // lay thong tin
+                navMobile.innerHTML = navPC.innerHTML;
+            </script>
+            
+            <div class="separate">
+                <div class="show-on-mobile">
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link">Log In</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link">Sign up</a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
     <main class="main">
+        
         <section class="service">
             <div class="container">
                 <h2 class="service__heading section__heading">Our services</h2>
@@ -303,13 +343,15 @@
                         <a href="#!" class="btn appointment__btn">Appointment</a>
                     </div>
                 </div>
-            </section>
-        </main>
-        <footer class="footer">
+        </section>
+    </main>
+    <footer class="footer">
             <div class="container">
                 <div class="footer__top">
                     <div class="footer__column">
-                        <a href="./assets/img/Logo.png" class="logo"></a>
+                        <a href="#!" class="logo">
+                            <img src="./assets/img/Logo.png" alt="">
+                        </a>
                         <p class="footer__desc">Exceptional dental care for all ages. Your great smile begins with a great dentist.</p>
                     </div>
                     <div class="footer__column">
@@ -338,7 +380,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer__column">
+                    <div class="footer__column footer-hidden-table">
                         <h3 class="footer__heading">Support</h3>
                         <ul class="footer__list">
                             <li class="footer__item">
@@ -386,7 +428,7 @@
                     <p class="footer__bottom--desc">2021 GDN. Copyright and All rights reserved.</p>
                 </div>
             </div>
-        </footer>
+    </footer>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init();
