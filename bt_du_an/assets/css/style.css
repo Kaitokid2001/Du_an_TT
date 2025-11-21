@@ -624,10 +624,6 @@ a{
     text-align: center;
 }
 
-.appointment__heading{
-    white-space: nowrap;
-}
-
 .appointment__heading::after {
     content: "";
     display: block;
